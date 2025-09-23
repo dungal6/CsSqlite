@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net9.0;net8.0;netstandard2.1</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>13</LangVersion>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <!-- NuGet Packaging -->
+    <PackageId>CsSqlite.Native</PackageId>
+    <PackageTags>sqlite;sql</PackageTags>
+    <Description>CsSqlite low-level bindings</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="runtimes\win-x64\native\sqlite3.dll" Pack="true"
+      PackagePath="runtimes\win-x64\native\" CopyToOutputDirectory="Always" />
+    <None Include="runtimes\win-x86\native\sqlite3.dll" Pack="true"
+      PackagePath="runtimes\win-x86\native\" CopyToOutputDirectory="Always" />
+    <None Include="runtimes\win-arm64\native\sqlite3.dll" Pack="true"
+      PackagePath="runtimes\win-arm64\native\" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="README.md" />
+    <EmbeddedResource Include="..\..\LICENSE" />
+  </ItemGroup>
+
+</Project>

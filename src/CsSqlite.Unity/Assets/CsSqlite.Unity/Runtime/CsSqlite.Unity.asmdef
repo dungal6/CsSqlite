@@ -1,0 +1,18 @@
+{
+    "name": "CsSqlite.Unity",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fbf84084ccfe94f0fb7801f07ef0d6b5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "CsSqlite.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
