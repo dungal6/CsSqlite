@@ -9,7 +9,7 @@ English | [日本語](./README_JA.md)
 
 ![benchmark](./docs/images/img-benchmark.png)
 
-CsSqliteis a highly performant and lightweight SQLite binding built in C#. It provides an API equivalent to [Microsoft.Data.Sqlite](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=net-cli) (the foundation package for EFCore SQLite) while achieving high performance through carefully tuned implementations.
+CsSqlite is a highly performant and lightweight SQLite binding built in C#. It provides an API equivalent to [Microsoft.Data.Sqlite](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=net-cli) (the foundation package for EFCore SQLite) while achieving high performance through carefully tuned implementations.
 
 ## Features
 
