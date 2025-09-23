@@ -60,8 +60,6 @@ Alternatively, open `Packages/manifest.json` and add the following to the `depen
 }
 ```
 
-Additionally, you need to add the DLL of the dependency [System.Runtime.CompilerServices.Unsafe](https://www.nuget.org/packages/System.Runtime.Compilerservices.Unsafe/) to your project. Use [NugetForUnity](https://github.com/GlitchEnzo/NuGetForUnity) or rename the `.nupkg` downloaded from NuGet to `.zip`, extract it, and add the DLL from the extracted folder to your Unity project.
-
 CsSqlite.Unity supports the following platforms:
 
 | Platform | Architecture            | Supported    | Notes |
