@@ -13,7 +13,7 @@ fn main() {
         .csharp_method_prefix("")
         .csharp_class_accessibility("public")
         .csharp_use_function_pointer(false)
-        .csharp_dll_name("libsqlite3");
+        .csharp_dll_name("sqlite3");
     builder
         .generate_to_file(
             "src/sqlite3_csbindgen.rs",
