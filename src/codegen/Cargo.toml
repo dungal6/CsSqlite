@@ -7,4 +7,4 @@ edition = "2024"
 
 [build-dependencies]
 bindgen = "0.72.1"
-csbindgen = { path = "/Users/yusuke/Desktop/Projects/Clones/csbindgen/csbindgen" }
+csbindgen = "1.9.5"
