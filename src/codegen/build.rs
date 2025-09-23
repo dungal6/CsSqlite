@@ -1,6 +1,4 @@
 fn main() {
-    cc::Build::new().file("native/sqlite3.c").compile("sqlite3");
-
     bindgen::Builder::default()
         .header("native/sqlite3.h")
         .generate()

@@ -19,7 +19,7 @@ namespace CsSqlite
 #else
         const string __DllName = "libsqlite3";
 #endif
-
+        
 
 
 
