@@ -12,7 +12,7 @@ namespace CsSqlite
 {
     public static unsafe partial class NativeMethods
     {
-        const string __DllName = "libsqlite3";
+        const string __DllName = "sqlite3";
 
 
 

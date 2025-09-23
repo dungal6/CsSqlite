@@ -17,7 +17,7 @@ namespace CsSqlite
 #elif UNITY_ANDROID && !UNITY_EDITOR
         const string __DllName = "sqliteX";
 #else
-        const string __DllName = "libsqlite3";
+        const string __DllName = "sqlite3";
 #endif
         
 
