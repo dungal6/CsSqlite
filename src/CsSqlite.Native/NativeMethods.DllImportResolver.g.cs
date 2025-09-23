@@ -1,3 +1,5 @@
+#if NET8_0_OR_GREATER
+
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -50,3 +52,5 @@ public partial class NativeMethods
         return IntPtr.Zero;
     }
 }
+
+#endif
