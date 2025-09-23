@@ -59,7 +59,12 @@ public unsafe readonly struct SqliteReader(SqliteConnection connection, sqlite3_
             return false;
         }
 
+#if NET8_0_OR_GREATER
         Unsafe.CopyBlock(ref destination[0], ref Unsafe.AsRef<byte>(ptr), (uint)count);
+#else
+        new Span<byte>(ptr, count).CopyTo(destination);
+#endif
+
         bytesWritten = count;
         return true;
     }
@@ -76,7 +81,12 @@ public unsafe readonly struct SqliteReader(SqliteConnection connection, sqlite3_
             return false;
         }
 
+#if NET8_0_OR_GREATER
         Unsafe.CopyBlock(ref utf8Destination[0], ref Unsafe.AsRef<byte>(ptr), (uint)count);
+#else
+        new Span<byte>(ptr, count).CopyTo(utf8Destination);
+#endif
+
         bytesWritten = count;
         return true;
     }

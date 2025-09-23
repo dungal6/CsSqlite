@@ -60,8 +60,6 @@ https://github.com/nuskey8/CsSqlite.git?path=src/CsSqlite.Unity/Assets/CsSqlite.
 }
 ```
 
-また、依存関係である[System.Runtime.CompilerServices.Unsafe](https://www.nuget.org/packages/System.Runtime.Compilerservices.Unsafe/)のdllをプロジェクトに追加する必要があります。これは[NugetForUnity](https://github.com/GlitchEnzo/NuGetForUnity)を用いるか、NuGetからインストールした.nupkgを.zipにリネームし、展開したフォルダ内のdllをUnityプロジェクトに追加してください。
-
 CsSqlite.Unityは以下のプラットフォームに対応しています。
 
 | プラットフォーム | アーキテクチャ          | サポート    | 備考 |
