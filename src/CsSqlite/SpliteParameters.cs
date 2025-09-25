@@ -166,7 +166,7 @@ public readonly unsafe ref struct SpliteParameters
     {
         fixed (byte* ptr = utf8Text)
         {
-            var code = sqlite3_bind_text(stmt, index, ptr, utf8Text.Length * 2, null);
+            var code = sqlite3_bind_text(stmt, index, ptr, utf8Text.Length, null);
             HandleErrorCode(code);
         }
     }
@@ -176,7 +176,7 @@ public readonly unsafe ref struct SpliteParameters
     {
         fixed (char* ptr = text)
         {
-            var code = sqlite3_bind_text16(stmt, index, ptr, text.Length, null);
+            var code = sqlite3_bind_text16(stmt, index, ptr, text.Length * 2, null);
             HandleErrorCode(code);
         }
     }
