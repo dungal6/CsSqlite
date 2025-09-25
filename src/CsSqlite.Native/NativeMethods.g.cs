@@ -16,180 +16,6 @@ namespace CsSqlite
 
 
 
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_busy_handler_arg2_delegate(void* arg1, int arg2);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_commit_hook_arg2_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_create_collation16_xCompare_delegate(void* arg1, int arg2, void* arg3, int arg4, void* arg5);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_create_collation_v2_xCompare_delegate(void* arg1, int arg2, void* arg3, int arg4, void* arg5);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_create_collation_xCompare_delegate(void* arg1, int arg2, void* arg3, int arg4, void* arg5);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_exec_callback_delegate(void* arg1, int arg2, byte** arg3, byte** arg4);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_progress_handler_arg3_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_rtree_geometry_callback_xGeom_delegate(sqlite3_rtree_geometry* arg1, int arg2, double* arg3, int* arg4);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_rtree_query_callback_xQueryFunc_delegate(sqlite3_rtree_query_info* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_set_authorizer_xAuth_delegate(void* arg1, int arg2, byte* arg3, byte* arg4, byte* arg5, byte* arg6);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_trace_v2_xCallback_delegate(uint arg1, void* arg2, void* arg3, void* arg4);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int sqlite3_wal_hook_arg2_delegate(void* arg1, sqlite3* arg2, byte* arg3, int arg4);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate uint sqlite3_autovacuum_pages_arg1_delegate(void* arg1, byte* arg2, uint arg3, uint arg4, uint arg5);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_auto_extension_xEntryPoint_delegate();
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_autovacuum_pages_arg3_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_bind_blob64_arg5_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_bind_blob_arg4_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_bind_pointer_arg5_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_bind_text16_arg5_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_bind_text64_arg5_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_bind_text_arg5_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_cancel_auto_extension_xEntryPoint_delegate();
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_collation_needed16_arg3_delegate(void* arg1, sqlite3* arg2, int eTextRep, void* arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_collation_needed_arg3_delegate(void* arg1, sqlite3* arg2, int eTextRep, byte* arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_collation_v2_xDestroy_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_function16_xFinal_delegate(sqlite3_context* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_function16_xFunc_delegate(sqlite3_context* arg1, int arg2, sqlite3_value** arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_function16_xStep_delegate(sqlite3_context* arg1, int arg2, sqlite3_value** arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_function_v2_xDestroy_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_function_v2_xFinal_delegate(sqlite3_context* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_function_v2_xFunc_delegate(sqlite3_context* arg1, int arg2, sqlite3_value** arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_function_v2_xStep_delegate(sqlite3_context* arg1, int arg2, sqlite3_value** arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_function_xFinal_delegate(sqlite3_context* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_function_xFunc_delegate(sqlite3_context* arg1, int arg2, sqlite3_value** arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_function_xStep_delegate(sqlite3_context* arg1, int arg2, sqlite3_value** arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_module_v2_xDestroy_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_window_function_xDestroy_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_window_function_xFinal_delegate(sqlite3_context* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_window_function_xInverse_delegate(sqlite3_context* arg1, int arg2, sqlite3_value** arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_window_function_xStep_delegate(sqlite3_context* arg1, int arg2, sqlite3_value** arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_create_window_function_xValue_delegate(sqlite3_context* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_memory_alarm_arg1_delegate(void* arg1, long arg2, int arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_profile_xProfile_delegate(void* arg1, byte* arg2, ulong arg3);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_result_blob64_arg4_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_result_blob_arg4_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_result_pointer_arg4_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_result_text16_arg4_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_result_text16be_arg4_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_result_text16le_arg4_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_result_text64_arg4_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_result_text_arg4_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_rollback_hook_arg2_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_rtree_query_callback_xDestructor_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_set_auxdata_arg3_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_set_clientdata_arg4_delegate(void* arg1);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_trace_xTrace_delegate(void* arg1, byte* arg2);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_unlock_notify_xNotify_delegate(void** apArg, int nArg);
-
-        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate void sqlite3_update_hook_arg2_delegate(void* arg1, int arg2, byte* arg3, byte* arg4, long arg5);
-
 
 
         [DllImport(__DllName, EntryPoint = "sqlite3_libversion", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
@@ -217,7 +43,7 @@ namespace CsSqlite
         public static extern int sqlite3_close_v2(sqlite3* arg1);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_exec", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_exec(sqlite3* arg1, byte* sql, sqlite3_exec_callback_delegate callback, void* arg2, byte** errmsg);
+        public static extern int sqlite3_exec(sqlite3* arg1, byte* sql, delegate* unmanaged[Cdecl]<void*, int, byte**, byte**, int> callback, void* arg2, byte** errmsg);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_initialize", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_initialize();
@@ -271,7 +97,7 @@ namespace CsSqlite
         public static extern int sqlite3_complete16(void* sql);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_busy_handler", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_busy_handler(sqlite3* arg1, sqlite3_busy_handler_arg2_delegate arg2, void* arg3);
+        public static extern int sqlite3_busy_handler(sqlite3* arg1, delegate* unmanaged[Cdecl]<void*, int, int> arg2, void* arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_busy_timeout", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_busy_timeout(sqlite3* arg1, int ms);
@@ -322,19 +148,19 @@ namespace CsSqlite
         public static extern void sqlite3_randomness(int N, void* P);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_set_authorizer", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_set_authorizer(sqlite3* arg1, sqlite3_set_authorizer_xAuth_delegate xAuth, void* pUserData);
+        public static extern int sqlite3_set_authorizer(sqlite3* arg1, delegate* unmanaged[Cdecl]<void*, int, byte*, byte*, byte*, byte*, int> xAuth, void* pUserData);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_trace", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void* sqlite3_trace(sqlite3* arg1, sqlite3_trace_xTrace_delegate xTrace, void* arg2);
+        public static extern void* sqlite3_trace(sqlite3* arg1, delegate* unmanaged[Cdecl]<void*, byte*, void> xTrace, void* arg2);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_profile", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void* sqlite3_profile(sqlite3* arg1, sqlite3_profile_xProfile_delegate xProfile, void* arg2);
+        public static extern void* sqlite3_profile(sqlite3* arg1, delegate* unmanaged[Cdecl]<void*, byte*, ulong, void> xProfile, void* arg2);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_trace_v2", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_trace_v2(sqlite3* arg1, uint uMask, sqlite3_trace_v2_xCallback_delegate xCallback, void* pCtx);
+        public static extern int sqlite3_trace_v2(sqlite3* arg1, uint uMask, delegate* unmanaged[Cdecl]<uint, void*, void*, void*, int> xCallback, void* pCtx);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_progress_handler", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void sqlite3_progress_handler(sqlite3* arg1, int arg2, sqlite3_progress_handler_arg3_delegate arg3, void* arg4);
+        public static extern void sqlite3_progress_handler(sqlite3* arg1, int arg2, delegate* unmanaged[Cdecl]<void*, int> arg3, void* arg4);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_open", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_open(byte* filename, sqlite3** ppDb);
@@ -433,10 +259,10 @@ namespace CsSqlite
         public static extern int sqlite3_stmt_busy(sqlite3_stmt* arg1);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_bind_blob", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_bind_blob(sqlite3_stmt* arg1, int arg2, void* arg3, int n, sqlite3_bind_blob_arg4_delegate arg4);
+        public static extern int sqlite3_bind_blob(sqlite3_stmt* arg1, int arg2, void* arg3, int n, delegate* unmanaged[Cdecl]<void*, void> arg4);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_bind_blob64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_bind_blob64(sqlite3_stmt* arg1, int arg2, void* arg3, ulong arg4, sqlite3_bind_blob64_arg5_delegate arg5);
+        public static extern int sqlite3_bind_blob64(sqlite3_stmt* arg1, int arg2, void* arg3, ulong arg4, delegate* unmanaged[Cdecl]<void*, void> arg5);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_bind_double", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_bind_double(sqlite3_stmt* arg1, int arg2, double arg3);
@@ -451,19 +277,19 @@ namespace CsSqlite
         public static extern int sqlite3_bind_null(sqlite3_stmt* arg1, int arg2);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_bind_text", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_bind_text(sqlite3_stmt* arg1, int arg2, byte* arg3, int arg4, sqlite3_bind_text_arg5_delegate arg5);
+        public static extern int sqlite3_bind_text(sqlite3_stmt* arg1, int arg2, byte* arg3, int arg4, delegate* unmanaged[Cdecl]<void*, void> arg5);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_bind_text16", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_bind_text16(sqlite3_stmt* arg1, int arg2, void* arg3, int arg4, sqlite3_bind_text16_arg5_delegate arg5);
+        public static extern int sqlite3_bind_text16(sqlite3_stmt* arg1, int arg2, void* arg3, int arg4, delegate* unmanaged[Cdecl]<void*, void> arg5);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_bind_text64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_bind_text64(sqlite3_stmt* arg1, int arg2, byte* arg3, ulong arg4, sqlite3_bind_text64_arg5_delegate arg5, byte encoding);
+        public static extern int sqlite3_bind_text64(sqlite3_stmt* arg1, int arg2, byte* arg3, ulong arg4, delegate* unmanaged[Cdecl]<void*, void> arg5, byte encoding);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_bind_value", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_bind_value(sqlite3_stmt* arg1, int arg2, sqlite3_value* arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_bind_pointer", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_bind_pointer(sqlite3_stmt* arg1, int arg2, void* arg3, byte* arg4, sqlite3_bind_pointer_arg5_delegate arg5);
+        public static extern int sqlite3_bind_pointer(sqlite3_stmt* arg1, int arg2, void* arg3, byte* arg4, delegate* unmanaged[Cdecl]<void*, void> arg5);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_bind_zeroblob", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_bind_zeroblob(sqlite3_stmt* arg1, int arg2, int n);
@@ -559,16 +385,16 @@ namespace CsSqlite
         public static extern int sqlite3_reset(sqlite3_stmt* pStmt);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_create_function", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_create_function(sqlite3* db, byte* zFunctionName, int nArg, int eTextRep, void* pApp, sqlite3_create_function_xFunc_delegate xFunc, sqlite3_create_function_xStep_delegate xStep, sqlite3_create_function_xFinal_delegate xFinal);
+        public static extern int sqlite3_create_function(sqlite3* db, byte* zFunctionName, int nArg, int eTextRep, void* pApp, delegate* unmanaged[Cdecl]<sqlite3_context*, int, sqlite3_value**, void> xFunc, delegate* unmanaged[Cdecl]<sqlite3_context*, int, sqlite3_value**, void> xStep, delegate* unmanaged[Cdecl]<sqlite3_context*, void> xFinal);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_create_function16", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_create_function16(sqlite3* db, void* zFunctionName, int nArg, int eTextRep, void* pApp, sqlite3_create_function16_xFunc_delegate xFunc, sqlite3_create_function16_xStep_delegate xStep, sqlite3_create_function16_xFinal_delegate xFinal);
+        public static extern int sqlite3_create_function16(sqlite3* db, void* zFunctionName, int nArg, int eTextRep, void* pApp, delegate* unmanaged[Cdecl]<sqlite3_context*, int, sqlite3_value**, void> xFunc, delegate* unmanaged[Cdecl]<sqlite3_context*, int, sqlite3_value**, void> xStep, delegate* unmanaged[Cdecl]<sqlite3_context*, void> xFinal);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_create_function_v2", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_create_function_v2(sqlite3* db, byte* zFunctionName, int nArg, int eTextRep, void* pApp, sqlite3_create_function_v2_xFunc_delegate xFunc, sqlite3_create_function_v2_xStep_delegate xStep, sqlite3_create_function_v2_xFinal_delegate xFinal, sqlite3_create_function_v2_xDestroy_delegate xDestroy);
+        public static extern int sqlite3_create_function_v2(sqlite3* db, byte* zFunctionName, int nArg, int eTextRep, void* pApp, delegate* unmanaged[Cdecl]<sqlite3_context*, int, sqlite3_value**, void> xFunc, delegate* unmanaged[Cdecl]<sqlite3_context*, int, sqlite3_value**, void> xStep, delegate* unmanaged[Cdecl]<sqlite3_context*, void> xFinal, delegate* unmanaged[Cdecl]<void*, void> xDestroy);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_create_window_function", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_create_window_function(sqlite3* db, byte* zFunctionName, int nArg, int eTextRep, void* pApp, sqlite3_create_window_function_xStep_delegate xStep, sqlite3_create_window_function_xFinal_delegate xFinal, sqlite3_create_window_function_xValue_delegate xValue, sqlite3_create_window_function_xInverse_delegate xInverse, sqlite3_create_window_function_xDestroy_delegate xDestroy);
+        public static extern int sqlite3_create_window_function(sqlite3* db, byte* zFunctionName, int nArg, int eTextRep, void* pApp, delegate* unmanaged[Cdecl]<sqlite3_context*, int, sqlite3_value**, void> xStep, delegate* unmanaged[Cdecl]<sqlite3_context*, void> xFinal, delegate* unmanaged[Cdecl]<sqlite3_context*, void> xValue, delegate* unmanaged[Cdecl]<sqlite3_context*, int, sqlite3_value**, void> xInverse, delegate* unmanaged[Cdecl]<void*, void> xDestroy);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_aggregate_count", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_aggregate_count(sqlite3_context* arg1);
@@ -586,7 +412,7 @@ namespace CsSqlite
         public static extern void sqlite3_thread_cleanup();
 
         [DllImport(__DllName, EntryPoint = "sqlite3_memory_alarm", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_memory_alarm(sqlite3_memory_alarm_arg1_delegate arg1, void* arg2, long arg3);
+        public static extern int sqlite3_memory_alarm(delegate* unmanaged[Cdecl]<void*, long, int, void> arg1, void* arg2, long arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_value_blob", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void* sqlite3_value_blob(sqlite3_value* arg1);
@@ -658,19 +484,19 @@ namespace CsSqlite
         public static extern void* sqlite3_get_auxdata(sqlite3_context* arg1, int N);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_set_auxdata", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void sqlite3_set_auxdata(sqlite3_context* arg1, int N, void* arg2, sqlite3_set_auxdata_arg3_delegate arg3);
+        public static extern void sqlite3_set_auxdata(sqlite3_context* arg1, int N, void* arg2, delegate* unmanaged[Cdecl]<void*, void> arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_get_clientdata", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void* sqlite3_get_clientdata(sqlite3* arg1, byte* arg2);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_set_clientdata", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_set_clientdata(sqlite3* arg1, byte* arg2, void* arg3, sqlite3_set_clientdata_arg4_delegate arg4);
+        public static extern int sqlite3_set_clientdata(sqlite3* arg1, byte* arg2, void* arg3, delegate* unmanaged[Cdecl]<void*, void> arg4);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_blob", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void sqlite3_result_blob(sqlite3_context* arg1, void* arg2, int arg3, sqlite3_result_blob_arg4_delegate arg4);
+        public static extern void sqlite3_result_blob(sqlite3_context* arg1, void* arg2, int arg3, delegate* unmanaged[Cdecl]<void*, void> arg4);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_blob64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void sqlite3_result_blob64(sqlite3_context* arg1, void* arg2, ulong arg3, sqlite3_result_blob64_arg4_delegate arg4);
+        public static extern void sqlite3_result_blob64(sqlite3_context* arg1, void* arg2, ulong arg3, delegate* unmanaged[Cdecl]<void*, void> arg4);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_double", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void sqlite3_result_double(sqlite3_context* arg1, double arg2);
@@ -700,25 +526,25 @@ namespace CsSqlite
         public static extern void sqlite3_result_null(sqlite3_context* arg1);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_text", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void sqlite3_result_text(sqlite3_context* arg1, byte* arg2, int arg3, sqlite3_result_text_arg4_delegate arg4);
+        public static extern void sqlite3_result_text(sqlite3_context* arg1, byte* arg2, int arg3, delegate* unmanaged[Cdecl]<void*, void> arg4);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_text64", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void sqlite3_result_text64(sqlite3_context* arg1, byte* arg2, ulong arg3, sqlite3_result_text64_arg4_delegate arg4, byte encoding);
+        public static extern void sqlite3_result_text64(sqlite3_context* arg1, byte* arg2, ulong arg3, delegate* unmanaged[Cdecl]<void*, void> arg4, byte encoding);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_text16", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void sqlite3_result_text16(sqlite3_context* arg1, void* arg2, int arg3, sqlite3_result_text16_arg4_delegate arg4);
+        public static extern void sqlite3_result_text16(sqlite3_context* arg1, void* arg2, int arg3, delegate* unmanaged[Cdecl]<void*, void> arg4);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_text16le", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void sqlite3_result_text16le(sqlite3_context* arg1, void* arg2, int arg3, sqlite3_result_text16le_arg4_delegate arg4);
+        public static extern void sqlite3_result_text16le(sqlite3_context* arg1, void* arg2, int arg3, delegate* unmanaged[Cdecl]<void*, void> arg4);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_text16be", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void sqlite3_result_text16be(sqlite3_context* arg1, void* arg2, int arg3, sqlite3_result_text16be_arg4_delegate arg4);
+        public static extern void sqlite3_result_text16be(sqlite3_context* arg1, void* arg2, int arg3, delegate* unmanaged[Cdecl]<void*, void> arg4);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_value", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void sqlite3_result_value(sqlite3_context* arg1, sqlite3_value* arg2);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_pointer", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void sqlite3_result_pointer(sqlite3_context* arg1, void* arg2, byte* arg3, sqlite3_result_pointer_arg4_delegate arg4);
+        public static extern void sqlite3_result_pointer(sqlite3_context* arg1, void* arg2, byte* arg3, delegate* unmanaged[Cdecl]<void*, void> arg4);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_result_zeroblob", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void sqlite3_result_zeroblob(sqlite3_context* arg1, int n);
@@ -730,19 +556,19 @@ namespace CsSqlite
         public static extern void sqlite3_result_subtype(sqlite3_context* arg1, uint arg2);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_create_collation", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_create_collation(sqlite3* arg1, byte* zName, int eTextRep, void* pArg, sqlite3_create_collation_xCompare_delegate xCompare);
+        public static extern int sqlite3_create_collation(sqlite3* arg1, byte* zName, int eTextRep, void* pArg, delegate* unmanaged[Cdecl]<void*, int, void*, int, void*, int> xCompare);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_create_collation_v2", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_create_collation_v2(sqlite3* arg1, byte* zName, int eTextRep, void* pArg, sqlite3_create_collation_v2_xCompare_delegate xCompare, sqlite3_create_collation_v2_xDestroy_delegate xDestroy);
+        public static extern int sqlite3_create_collation_v2(sqlite3* arg1, byte* zName, int eTextRep, void* pArg, delegate* unmanaged[Cdecl]<void*, int, void*, int, void*, int> xCompare, delegate* unmanaged[Cdecl]<void*, void> xDestroy);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_create_collation16", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_create_collation16(sqlite3* arg1, void* zName, int eTextRep, void* pArg, sqlite3_create_collation16_xCompare_delegate xCompare);
+        public static extern int sqlite3_create_collation16(sqlite3* arg1, void* zName, int eTextRep, void* pArg, delegate* unmanaged[Cdecl]<void*, int, void*, int, void*, int> xCompare);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_collation_needed", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_collation_needed(sqlite3* arg1, void* arg2, sqlite3_collation_needed_arg3_delegate arg3);
+        public static extern int sqlite3_collation_needed(sqlite3* arg1, void* arg2, delegate* unmanaged[Cdecl]<void*, sqlite3*, int, byte*, void> arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_collation_needed16", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_collation_needed16(sqlite3* arg1, void* arg2, sqlite3_collation_needed16_arg3_delegate arg3);
+        public static extern int sqlite3_collation_needed16(sqlite3* arg1, void* arg2, delegate* unmanaged[Cdecl]<void*, sqlite3*, int, void*, void> arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_sleep", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_sleep(int arg1);
@@ -769,16 +595,16 @@ namespace CsSqlite
         public static extern sqlite3_stmt* sqlite3_next_stmt(sqlite3* pDb, sqlite3_stmt* pStmt);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_commit_hook", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void* sqlite3_commit_hook(sqlite3* arg1, sqlite3_commit_hook_arg2_delegate arg2, void* arg3);
+        public static extern void* sqlite3_commit_hook(sqlite3* arg1, delegate* unmanaged[Cdecl]<void*, int> arg2, void* arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_rollback_hook", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void* sqlite3_rollback_hook(sqlite3* arg1, sqlite3_rollback_hook_arg2_delegate arg2, void* arg3);
+        public static extern void* sqlite3_rollback_hook(sqlite3* arg1, delegate* unmanaged[Cdecl]<void*, void> arg2, void* arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_autovacuum_pages", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_autovacuum_pages(sqlite3* db, sqlite3_autovacuum_pages_arg1_delegate arg1, void* arg2, sqlite3_autovacuum_pages_arg3_delegate arg3);
+        public static extern int sqlite3_autovacuum_pages(sqlite3* db, delegate* unmanaged[Cdecl]<void*, byte*, uint, uint, uint, uint> arg1, void* arg2, delegate* unmanaged[Cdecl]<void*, void> arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_update_hook", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void* sqlite3_update_hook(sqlite3* arg1, sqlite3_update_hook_arg2_delegate arg2, void* arg3);
+        public static extern void* sqlite3_update_hook(sqlite3* arg1, delegate* unmanaged[Cdecl]<void*, int, byte*, byte*, long, void> arg2, void* arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_enable_shared_cache", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_enable_shared_cache(int arg1);
@@ -808,10 +634,10 @@ namespace CsSqlite
         public static extern int sqlite3_enable_load_extension(sqlite3* db, int onoff);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_auto_extension", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_auto_extension(sqlite3_auto_extension_xEntryPoint_delegate xEntryPoint);
+        public static extern int sqlite3_auto_extension(delegate* unmanaged[Cdecl]<void> xEntryPoint);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_cancel_auto_extension", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_cancel_auto_extension(sqlite3_cancel_auto_extension_xEntryPoint_delegate xEntryPoint);
+        public static extern int sqlite3_cancel_auto_extension(delegate* unmanaged[Cdecl]<void> xEntryPoint);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_reset_auto_extension", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void sqlite3_reset_auto_extension();
@@ -820,7 +646,7 @@ namespace CsSqlite
         public static extern int sqlite3_create_module(sqlite3* db, byte* zName, sqlite3_module* p, void* pClientData);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_create_module_v2", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_create_module_v2(sqlite3* db, byte* zName, sqlite3_module* p, void* pClientData, sqlite3_create_module_v2_xDestroy_delegate xDestroy);
+        public static extern int sqlite3_create_module_v2(sqlite3* db, byte* zName, sqlite3_module* p, void* pClientData, delegate* unmanaged[Cdecl]<void*, void> xDestroy);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_drop_modules", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_drop_modules(sqlite3* db, byte** azKeep);
@@ -958,7 +784,7 @@ namespace CsSqlite
         public static extern int sqlite3_backup_pagecount(sqlite3_backup* p);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_unlock_notify", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_unlock_notify(sqlite3* pBlocked, sqlite3_unlock_notify_xNotify_delegate xNotify, void* pNotifyArg);
+        public static extern int sqlite3_unlock_notify(sqlite3* pBlocked, delegate* unmanaged[Cdecl]<void**, int, void> xNotify, void* pNotifyArg);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_stricmp", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_stricmp(byte* arg1, byte* arg2);
@@ -976,7 +802,7 @@ namespace CsSqlite
         public static extern void sqlite3_log(int iErrCode, byte* zFormat);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_wal_hook", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern void* sqlite3_wal_hook(sqlite3* arg1, sqlite3_wal_hook_arg2_delegate arg2, void* arg3);
+        public static extern void* sqlite3_wal_hook(sqlite3* arg1, delegate* unmanaged[Cdecl]<void*, sqlite3*, byte*, int, int> arg2, void* arg3);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_wal_autocheckpoint", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern int sqlite3_wal_autocheckpoint(sqlite3* db, int N);
@@ -1051,10 +877,10 @@ namespace CsSqlite
         public static extern int sqlite3_deserialize(sqlite3* db, byte* zSchema, byte* pData, long szDb, long szBuf, uint mFlags);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_rtree_geometry_callback", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_rtree_geometry_callback(sqlite3* db, byte* zGeom, sqlite3_rtree_geometry_callback_xGeom_delegate xGeom, void* pContext);
+        public static extern int sqlite3_rtree_geometry_callback(sqlite3* db, byte* zGeom, delegate* unmanaged[Cdecl]<sqlite3_rtree_geometry*, int, double*, int*, int> xGeom, void* pContext);
 
         [DllImport(__DllName, EntryPoint = "sqlite3_rtree_query_callback", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int sqlite3_rtree_query_callback(sqlite3* db, byte* zQueryFunc, sqlite3_rtree_query_callback_xQueryFunc_delegate xQueryFunc, void* pContext, sqlite3_rtree_query_callback_xDestructor_delegate xDestructor);
+        public static extern int sqlite3_rtree_query_callback(sqlite3* db, byte* zQueryFunc, delegate* unmanaged[Cdecl]<sqlite3_rtree_query_info*, int> xQueryFunc, void* pContext, delegate* unmanaged[Cdecl]<void*, void> xDestructor);
 
 
     }
@@ -1075,24 +901,24 @@ namespace CsSqlite
     public unsafe partial struct sqlite3_io_methods
     {
         public int iVersion;
-        public void* xClose;
-        public void* xRead;
-        public void* xWrite;
-        public void* xTruncate;
-        public void* xSync;
-        public void* xFileSize;
-        public void* xLock;
-        public void* xUnlock;
-        public void* xCheckReservedLock;
-        public void* xFileControl;
-        public void* xSectorSize;
-        public void* xDeviceCharacteristics;
-        public void* xShmMap;
-        public void* xShmLock;
-        public void* xShmBarrier;
-        public void* xShmUnmap;
-        public void* xFetch;
-        public void* xUnfetch;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int> xClose;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, void*, int, long, int> xRead;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, void*, int, long, int> xWrite;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, long, int> xTruncate;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int, int> xSync;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, long*, int> xFileSize;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int, int> xLock;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int, int> xUnlock;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int*, int> xCheckReservedLock;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int, void*, int> xFileControl;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int> xSectorSize;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int> xDeviceCharacteristics;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int, int, int, void**, int> xShmMap;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int, int, int, int> xShmLock;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, void> xShmBarrier;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, int, int> xShmUnmap;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, long, int, void**, int> xFetch;
+        public delegate* unmanaged[Cdecl]<sqlite3_file*, long, void*, int> xUnfetch;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1110,22 +936,22 @@ namespace CsSqlite
         public sqlite3_vfs* pNext;
         public byte* zName;
         public void* pAppData;
-        public void* xOpen;
-        public void* xDelete;
-        public void* xAccess;
-        public void* xFullPathname;
-        public void* xDlOpen;
-        public void* xDlError;
-        public void* xDlSym;
-        public void* xDlClose;
-        public void* xRandomness;
-        public void* xSleep;
-        public void* xCurrentTime;
-        public void* xGetLastError;
-        public void* xCurrentTimeInt64;
-        public void* xSetSystemCall;
-        public void* xGetSystemCall;
-        public void* xNextSystemCall;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, byte*, sqlite3_file*, int, int*, int> xOpen;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, byte*, int, int> xDelete;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, byte*, int, int*, int> xAccess;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, byte*, int, byte*, int> xFullPathname;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, byte*, void*> xDlOpen;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, int, byte*, void> xDlError;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, void*, byte*, delegate* unmanaged[Cdecl]<sqlite3_vfs*, void*, byte*, void>> xDlSym;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, void*, void> xDlClose;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, int, byte*, int> xRandomness;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, int, int> xSleep;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, double*, int> xCurrentTime;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, int, byte*, int> xGetLastError;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, long*, int> xCurrentTimeInt64;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, byte*, delegate* unmanaged[Cdecl]<void>, int> xSetSystemCall;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, byte*, delegate* unmanaged[Cdecl]<void>> xGetSystemCall;
+        public delegate* unmanaged[Cdecl]<sqlite3_vfs*, byte*, byte*> xNextSystemCall;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1150,30 +976,30 @@ namespace CsSqlite
     public unsafe partial struct sqlite3_module
     {
         public int iVersion;
-        public void* xCreate;
-        public void* xConnect;
-        public void* xBestIndex;
-        public void* xDisconnect;
-        public void* xDestroy;
-        public void* xOpen;
-        public void* xClose;
-        public void* xFilter;
-        public void* xNext;
-        public void* xEof;
-        public void* xColumn;
-        public void* xRowid;
-        public void* xUpdate;
-        public void* xBegin;
-        public void* xSync;
-        public void* xCommit;
-        public void* xRollback;
-        public void* xFindFunction;
-        public void* xRename;
-        public void* xSavepoint;
-        public void* xRelease;
-        public void* xRollbackTo;
-        public void* xShadowName;
-        public void* xIntegrity;
+        public delegate* unmanaged[Cdecl]<sqlite3*, void*, int, byte**, sqlite3_vtab**, byte**, int> xCreate;
+        public delegate* unmanaged[Cdecl]<sqlite3*, void*, int, byte**, sqlite3_vtab**, byte**, int> xConnect;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, sqlite3_index_info*, int> xBestIndex;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int> xDisconnect;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int> xDestroy;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, sqlite3_vtab_cursor**, int> xOpen;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab_cursor*, int> xClose;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab_cursor*, int, byte*, int, sqlite3_value**, int> xFilter;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab_cursor*, int> xNext;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab_cursor*, int> xEof;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab_cursor*, sqlite3_context*, int, int> xColumn;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab_cursor*, long*, int> xRowid;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int, sqlite3_value**, long*, int> xUpdate;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int> xBegin;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int> xSync;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int> xCommit;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int> xRollback;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int, byte*, delegate* unmanaged[Cdecl]<sqlite3_context*, int, sqlite3_value**, void>*, void**, int> xFindFunction;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, byte*, int> xRename;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int, int> xSavepoint;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int, int> xRelease;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, int, int> xRollbackTo;
+        public delegate* unmanaged[Cdecl]<byte*, int> xShadowName;
+        public delegate* unmanaged[Cdecl]<sqlite3_vtab*, byte*, byte*, int, byte**, int> xIntegrity;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1262,7 +1088,7 @@ namespace CsSqlite
         public int nParam;
         public double* aParam;
         public void* pUser;
-        public void* xDelUser;
+        public delegate* unmanaged[Cdecl]<void*, void> xDelUser;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1272,7 +1098,7 @@ namespace CsSqlite
         public int nParam;
         public double* aParam;
         public void* pUser;
-        public void* xDelUser;
+        public delegate* unmanaged[Cdecl]<void*, void> xDelUser;
         public double* aCoord;
         public uint* anQueue;
         public int nCoord;
