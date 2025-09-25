@@ -32,28 +32,48 @@ public readonly unsafe ref struct SpliteParameters
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void Add(int value)
+    public void Add(int index, int value)
     {
-        BindParameter(Count + 1, value);
+        BindParameter(index, value);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void Add(long value)
+    public void Add(int index, long value)
     {
-        BindParameter(Count + 1, value);
+        BindParameter(index, value);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void Add(ReadOnlySpan<char> text)
+    public void Add(int index, ReadOnlySpan<char> text)
     {
         using var utf8Text = new PooledUtf8String(text);
-        BindText(Count + 1, utf8Text.AsSpan(), false);
+        BindText(index, utf8Text.AsSpan(), false);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void Add(ReadOnlySpan<byte> utf8Text)
+    public void Add(int index, ReadOnlySpan<byte> utf8Text)
     {
-        BindText(Count + 1, utf8Text, false);
+        BindText(index, utf8Text, false);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public void AddLiteral(int index,
+#if NET8_0_OR_GREATER
+[System.Diagnostics.CodeAnalysis.ConstantExpected]
+#endif
+    string text)
+    {
+        BindText(index, text, true);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public void AddLiteral(int index,
+#if NET8_0_OR_GREATER
+[System.Diagnostics.CodeAnalysis.ConstantExpected]
+#endif
+    ReadOnlySpan<byte> utf8Text)
+    {
+        BindText(index, utf8Text, true);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -120,7 +140,6 @@ string value)
         using var utf8Name = new PooledUtf8String(name);
         BindText(GetParameterIndex(utf8Name.AsSpan()), value, true);
     }
-
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Add(ReadOnlySpan<byte> utf8Name, ReadOnlySpan<byte> value)
