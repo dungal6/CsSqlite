@@ -1,7 +1,7 @@
 # CsSqlite
  Extremely fast, robust, and lightweight SQLite bindings for .NET and Unity
 
-[![NuGet](https://img.shields.io/nuget/v/CsSqlite.svg)](https://www.nuget.org/packages/Luau)
+[![NuGet](https://img.shields.io/nuget/v/CsSqlite.svg)](https://www.nuget.org/packages/CsSqlite)
 [![Releases](https://img.shields.io/github/release/nuskey8/CsSqlite.svg)](https://github.com/nuskey8/CsSqlite/releases)
 [![license](https://img.shields.io/badge/LICENSE-MIT-green.svg)](LICENSE)
 
