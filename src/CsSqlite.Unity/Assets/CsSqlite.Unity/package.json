@@ -1,6 +1,6 @@
 {
     "name": "com.nuskey.sqlite3.unity",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "displayName": "CsSqlite.Unity",
     "description": "Extremely fast, robust, and lightweight SQLite bindings for .NET and Unity",
     "author": {
