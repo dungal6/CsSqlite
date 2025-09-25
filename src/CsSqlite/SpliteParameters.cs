@@ -47,13 +47,13 @@ public readonly unsafe ref struct SpliteParameters
     public void Add(ReadOnlySpan<char> text)
     {
         using var utf8Text = new PooledUtf8String(text);
-        BindText(Count + 1, utf8Text.AsSpan());
+        BindText(Count + 1, utf8Text.AsSpan(), false);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Add(ReadOnlySpan<byte> utf8Text)
     {
-        BindText(Count + 1, utf8Text);
+        BindText(Count + 1, utf8Text, false);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -106,14 +106,38 @@ public readonly unsafe ref struct SpliteParameters
     {
         connection.ThrowIfDisposed();
         using var utf8Name = new PooledUtf8String(name);
-        BindText(GetParameterIndex(utf8Name.AsSpan()), value);
+        BindText(GetParameterIndex(utf8Name.AsSpan()), value, false);
     }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public void AddLiteral(ReadOnlySpan<char> name,
+#if NET8_0_OR_GREATER
+[System.Diagnostics.CodeAnalysis.ConstantExpected]
+#endif
+string value)
+    {
+        connection.ThrowIfDisposed();
+        using var utf8Name = new PooledUtf8String(name);
+        BindText(GetParameterIndex(utf8Name.AsSpan()), value, true);
+    }
+
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Add(ReadOnlySpan<byte> utf8Name, ReadOnlySpan<byte> value)
     {
         connection.ThrowIfDisposed();
-        BindText(GetParameterIndex(utf8Name), value);
+        BindText(GetParameterIndex(utf8Name), value, false);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public void AddLiteral(ReadOnlySpan<byte> utf8Name,
+#if NET8_0_OR_GREATER
+[System.Diagnostics.CodeAnalysis.ConstantExpected]
+#endif
+    ReadOnlySpan<byte> value)
+    {
+        connection.ThrowIfDisposed();
+        BindText(GetParameterIndex(utf8Name), value, true);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -162,21 +186,21 @@ public readonly unsafe ref struct SpliteParameters
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    void BindText(int index, ReadOnlySpan<byte> utf8Text)
+    void BindText(int index, ReadOnlySpan<byte> utf8Text, bool isStatic)
     {
         fixed (byte* ptr = utf8Text)
         {
-            var code = sqlite3_bind_text(stmt, index, ptr, utf8Text.Length, null);
+            var code = sqlite3_bind_text(stmt, index, ptr, utf8Text.Length, isStatic ? Constants.SQLITE_STATIC : Constants.SQLITE_TRANSIENT);
             HandleErrorCode(code);
         }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    void BindText(int index, ReadOnlySpan<char> text)
+    void BindText(int index, ReadOnlySpan<char> text, bool isStatic)
     {
         fixed (char* ptr = text)
         {
-            var code = sqlite3_bind_text16(stmt, index, ptr, text.Length * 2, null);
+            var code = sqlite3_bind_text16(stmt, index, ptr, text.Length * 2, isStatic ? Constants.SQLITE_STATIC : Constants.SQLITE_TRANSIENT);
             HandleErrorCode(code);
         }
     }
@@ -186,7 +210,7 @@ public readonly unsafe ref struct SpliteParameters
     {
         fixed (byte* ptr = blob)
         {
-            var code = sqlite3_bind_blob(stmt, index, ptr, blob.Length, null);
+            var code = sqlite3_bind_blob(stmt, index, ptr, blob.Length, Constants.SQLITE_TRANSIENT);
             HandleErrorCode(code);
         }
     }
