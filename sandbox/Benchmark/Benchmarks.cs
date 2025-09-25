@@ -82,8 +82,8 @@ public class Benchmarks
         conn.ExecuteNonQuery("CREATE TABLE t(id INTEGER PRIMARY KEY, val TEXT);");
 
         using var cmd = conn.CreateCommand("INSERT INTO t(val) VALUES ($foo), ($bar);");
-        cmd.Parameters.Add("$foo"u8, "foo"u8);
-        cmd.Parameters.Add("$bar"u8, "bar"u8);
+        cmd.Parameters.AddLiteral("$foo"u8, "foo"u8);
+        cmd.Parameters.AddLiteral("$bar"u8, "bar"u8);
         cmd.ExecuteNonQuery();
 
         using var reader = conn.ExecuteReader("SELECT * FROM t;");
